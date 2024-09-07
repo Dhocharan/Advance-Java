@@ -1,0 +1,32 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+    <action name="adduser" class="action.adduser" method="post">
+			<result name="success">/success</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+        <action name="addProductAction" class="action.addProductAction" method="post">
+            <result name="success">/index.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <action name="updateProductAction" class="action.UpdateProductAction" method="post">
+            <result name="success">/displayProduct.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <action name="deleteProductAction" class="action.DeleteProductAction" method="post">
+            <result name="success">/displayProduct.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <!-- Add action mapping for the SignupAction -->
+        <action name="SignupAction" class="action.SignupAction" method="post">
+            <result name="success">/index.jsp</result>
+            <result name="error">/error</result>
+        </action>
+    </package>
+</struts>
